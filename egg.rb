@@ -40,7 +40,7 @@ end
 # end
 
 get '/' do
-  'eggs coming soon'
+  File.read( File.expand_path('./public/main_index.html') )
 end
 
 
