@@ -3,8 +3,6 @@ require 'sinatra'
 
 
 configure do
-
-  Markaby::Builder.set(:indent, 2) 
   
   error do
     %~
