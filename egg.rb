@@ -44,4 +44,8 @@ get '/' do
 end
 
 
-
+get '/*beep*.*' do
+  exts = ['mp3', 'wav'].detect  { |e| e == params['splat'].last.downcase }
+  not_found if !exts
+  redirect "http://megauni.s3.amazonaws.com/beeping.#{exts}" 
+end
